@@ -1,0 +1,13 @@
+{
+  "name": "cordova-plugin-sunmi-inner-printer",
+  "version": "0.0.1",
+  "description": "Ionic Sunmi V1 Inner Printer",
+  "cordova": {
+    "id": "cordova-plugin-sunmi-inner-printer",
+    "platforms": [
+      "android"
+    ]
+  },
+  "author": "Silvio Campos",
+  "license": "MIT"
+}
