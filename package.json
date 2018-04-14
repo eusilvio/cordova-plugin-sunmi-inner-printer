@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-sunmi-inner-printer",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Ionic Sunmi V1 Inner Printer",
   "cordova": {
     "id": "cordova-plugin-sunmi-inner-printer",
@@ -8,6 +8,20 @@
       "android"
     ]
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silviocamposs/cordova-plugin-sunmi-inner-printer"
+  },
   "author": "Silvio Campos",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "cordovaDependencies": {
+      "3.0.0": {
+        "cordova-android": ">=6.3.0"
+      }
+    }
+  },
+  "dependencies": {
+    "cordova-plugin-camera": "^4.0.2"
+  }
 }
