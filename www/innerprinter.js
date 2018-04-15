@@ -20,40 +20,40 @@ module.exports = {
   getPrintedLength: function (resolve, reject) {
     exec(resolve, reject, "Printer", "getPrintedLength", []);
   },
-  lineWrap: function (resolve, reject, count) {
+  lineWrap: function (count, resolve, reject) {
     exec(resolve, reject, "Printer", "lineWrap", [count]);
   },
-  sendRAWData: function (resolve, reject, base64Data) {
+  sendRAWData: function (base64Data, resolve, reject) {
     exec(resolve, reject, "Printer", "sendRAWData", [base64Data]);
   },
-  setAlignment: function (resolve, reject, alignment) {
+  setAlignment: function (alignment, resolve, reject) {
     exec(resolve, reject, "Printer", "setAlignment", [alignment]);
   },
-  setFontName: function (resolve, reject, typeface) {
+  setFontName: function (typeface, resolve, reject) {
     exec(resolve, reject, "Printer", "setFontName", [typeface]);
   },
-  setFontSize: function (resolve, reject, fontSize) {
+  setFontSize: function (fontSize, resolve, reject) {
     exec(resolve, reject, "Printer", "setFontSize", [fontSize]);
   },
-  printTextWithFont: function (resolve, reject, text, typeface, fontSize) {
+  printTextWithFont: function (text, typeface, fontSize, resolve, reject) {
     exec(resolve, reject, "Printer", "printTextWithFont", [text, typeface, fontSize]);
   },
-  printColumnsText: function (resolve, reject, colsTextArr, colsWidthArr, colsAlign) {
+  printColumnsText: function (colsTextArr, colsWidthArr, colsAlign, resolve, reject) {
     exec(resolve, reject, "Printer", "printColumnsText", [colsTextArr, colsWidthArr, colsAlign]);
   },
-  printBitmap: function (resolve, reject, base64Data, width, height) {
+  printBitmap: function (base64Data, width, height, resolve, reject) {
     exec(resolve, reject, "Printer", "printBitmap", [base64Data, width, height]);
   },
-  printBarCode: function (resolve, reject, barCodeData, symbology, width, height, textPosition) {
+  printBarCode: function (barCodeData, symbology, width, height, textPosition, resolve, reject) {
     exec(resolve, reject, "Printer", "printBitmap", [barCodeData, symbology, width, height, textPosition]);
   },
-  printQRCode: function (resolve, reject, qrCodeData, moduleSize, errorLevel) {
+  printQRCode: function (qrCodeData, moduleSize, errorLevel, resolve, reject) {
     exec(resolve, reject, "Printer", "printQRCode", [qrCodeData, moduleSize, errorLevel]);
   },
-  printOriginalText: function (resolve, reject, text) {
+  printOriginalText: function (text, resolve, reject) {
     exec(resolve, reject, "Printer", "printOriginalText", [text]);
   },
-  printString: function (resolve, reject, text) {
+  printString: function (text, resolve, reject) {
     exec(resolve, reject, "Printer", "printString", [text]);
   },
   printerStatusStartListener: function (onSuccess, onError) {
