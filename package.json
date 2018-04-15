@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-sunmi-inner-printer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Cordova/Ionic Sunmi V1 Inner Printer",
   "cordova": {
     "id": "cordova-plugin-sunmi-inner-printer",
@@ -20,8 +20,5 @@
         "cordova-android": ">=6.3.0"
       }
     }
-  },
-  "dependencies": {
-    "cordova-plugin-camera": "^4.0.2"
   }
 }
