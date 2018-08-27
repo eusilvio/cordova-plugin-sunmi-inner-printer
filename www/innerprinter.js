@@ -45,7 +45,7 @@ module.exports = {
     exec(resolve, reject, "Printer", "printBitmap", [base64Data, width, height]);
   },
   printBarCode: function (barCodeData, symbology, width, height, textPosition, resolve, reject) {
-    exec(resolve, reject, "Printer", "printBitmap", [barCodeData, symbology, width, height, textPosition]);
+    exec(resolve, reject, "Printer", "printBarCode", [barCodeData, symbology, width, height, textPosition]);
   },
   printQRCode: function (qrCodeData, moduleSize, errorLevel, resolve, reject) {
     exec(resolve, reject, "Printer", "printQRCode", [qrCodeData, moduleSize, errorLevel]);
