@@ -441,7 +441,7 @@ public class BitmapUtils {
 
     canvas.drawText(gText, x, y, paint);
 
-    canvas.save(Canvas.ALL_SAVE_FLAG);
+    canvas.save();//canvas.save(Canvas.ALL_SAVE_FLAG);
     canvas.restore();
 
     return bitmap;

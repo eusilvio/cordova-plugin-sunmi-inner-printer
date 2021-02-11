@@ -1,12 +1,13 @@
 /**
 * JIUI V1 打印服务
-* AIDL Version: 1.1
+* AIDL Version: 2.1
 */
 
 package woyou.aidlservice.jiuiv5;
 
 import woyou.aidlservice.jiuiv5.ICallback;
 import android.graphics.Bitmap;
+import com.sunmi.trans.TransBean;
 
 interface IWoyouService
 {
@@ -170,7 +171,12 @@ interface IWoyouService
 	*
 	*/
 	void printOriginalText(String text, in ICallback callback);
-
+	/**
+	* lib包事务打印专用接口
+	* transbean		打印任务列表
+	* Ver 1.8.0中增加
+	*/
+	void commitPrint(in TransBean[] transbean, in ICallback callback);
 	/**
 	* 打印缓冲区内容
 	*/
@@ -200,5 +206,10 @@ interface IWoyouService
 	* 备注: 三个参数的数组长度应该一致, 如果colsText[i]的宽度大于colsWidth[i], 则文本换行
 	*/
 	void printColumnsString(in String[] colsTextArr, in int[] colsWidthArr, in int[] colsAlign, in ICallback callback);
-
+	/**
+	* 打印图片
+	* @param bitmap: 	图片bitmap对象(最大宽度384像素，图片超过1M无法打印)
+	* @param type:      目前有两种打印方式：0、同printBitmap 1、阈值200的黑白化图片 2、灰度图片
+	*/
+	void printBitmapCustom(in Bitmap bitmap, in int type, in ICallback callback);
 }

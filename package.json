@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-sunmi-inner-printer",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Cordova/Ionic Sunmi V1 Inner Printer",
   "cordova": {
     "id": "cordova-plugin-sunmi-inner-printer",
@@ -16,8 +16,8 @@
   "license": "MIT",
   "engines": {
     "cordovaDependencies": {
-      "3.0.0": {
-        "cordova-android": ">=6.3.0"
+      "7.1.0": {
+        "cordova-android": ">=7.1.0"
       }
     }
   }

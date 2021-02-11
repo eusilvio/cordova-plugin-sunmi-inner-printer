@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin
-  xmlns="http://www.phonegap.com/ns/plugins/1.0"
-  xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-sunmi-inner-printer" version="1.0.3">
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-sunmi-inner-printer" version="1.1.0">
   <name>SunmiInnerPrinter</name>
   <engines>
-    <engine name="cordova" version=">=3.0.0"/>
+    <engine name="cordova" version=">=7.1.0" />
+    <engine name="cordova-android" version=">=7.1.0" />
   </engines>
   <js-module src="www/innerprinter.js" name="InnerPrinter">
-    <clobbers target="sunmiInnerPrinter" />
+    <clobbers target="navigator.sunmiInnerPrinter" />
   </js-module>
   <platform name="android">
+    <preference name="ANDROID_SUPPORT_V13_VERSION" default="27.+" />
+    <framework src="com.sunmi:sunmiui:latest.release" />
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="Printer">
-        <param name="android-package" value="com.sunmi.innerprinter.Printer"/>
+        <param name="android-package" value="com.sunmi.innerprinter.Printer" />
         <param name="onload" value="true" />
       </feature>
     </config-file>
@@ -36,11 +37,13 @@
         </intent-filter>
       </service>
     </config-file>
-    <source-file src="src/android/com/sunmi/innerprinter/Printer.java" target-dir="src/com/sunmi/innerprinter/"/>
-    <source-file src="src/android/com/sunmi/innerprinter/PrinterStatusReceiver.java" target-dir="src/com/sunmi/innerprinter/"/>
-    <source-file src="src/android/com/sunmi/utils/BitmapUtils.java" target-dir="src/com/sunmi/utils/"/>
-    <source-file src="src/android/com/sunmi/utils/ThreadPoolManager.java" target-dir="src/com/sunmi/utils/"/>
-    <source-file src="src/android/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/woyou/aidlservice/jiuiv5/"/>
-    <source-file src="src/android/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/woyou/aidlservice/jiuiv5/"/>
+    <source-file src="src/android/com/sunmi/innerprinter/Printer.java" target-dir="src/com/sunmi/innerprinter/" />
+    <source-file src="src/android/com/sunmi/innerprinter/PrinterStatusReceiver.java" target-dir="src/com/sunmi/innerprinter/" />
+    <source-file src="src/android/com/sunmi/utils/BitmapUtils.java" target-dir="src/com/sunmi/utils/" />
+    <source-file src="src/android/com/sunmi/utils/ThreadPoolManager.java" target-dir="src/com/sunmi/utils/" />
+    <source-file src="src/android/woyou/aidlservice/jiuiv5/IWoyouService.aidl" target-dir="src/woyou/aidlservice/jiuiv5/" />
+    <source-file src="src/android/woyou/aidlservice/jiuiv5/ICallback.aidl" target-dir="src/woyou/aidlservice/jiuiv5/" />
+    <source-file src="src/android/com/sunmi/trans/TransBean.java" target-dir="src/com/sunmi/trans/" />
+    <source-file src="src/android/com/sunmi/trans/TransBean.aidl" target-dir="src/com/sunmi/trans/" />
   </platform>
 </plugin>
