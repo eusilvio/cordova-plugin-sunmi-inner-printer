@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="animate.gif" />
+</p>
+
 # cordova-plugin-sunmi-inner-printer
 Cordova/Ionic Plugin for Sunmi V1 Printer
 
@@ -13,3 +17,7 @@ Plugin based on https://github.com/labibramadhan/cordova-sunmi-inner-printer
 2. Replaced `canvas.save(Canvas.ALL_SAVE_FLAG)` with `canvas.save()` on `BitmapUtils.java`
 
 3. Updated the `AIDL` with `version 2.1`
+
+#### DOCS
+
+in preparation
